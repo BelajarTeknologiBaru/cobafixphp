@@ -1,5 +1,6 @@
 <?php 
-require 'functions.php';
+require 'helper/functions.php';
+
 $mahasiswa = query("SELECT * FROM mahasiswa");
 ?>
 
@@ -14,7 +15,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
     
 <h1>Daftar Mahasiswa</h1>
 
-<a href="tambah.php">Tambah data mahasiswa</a>
+<a href="create.php">Tambah data mahasiswa</a>
 <br><br>
 
 <table border="1" cellpadding="10" cellspacing="0">
@@ -34,7 +35,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <td><?= $i; ?></td>
         <td>
             <a href="">ubah</a> |
-            <a href="hapus.php?id=<?= $baris["id"]; ?>" onclick="return confirm('yakin?')">hapus</a>
+            <a href="delete.php?id=<?= $baris["id"]; ?>" onclick="return confirm('yakin?')">hapus</a>
         </td>
         <td><img src="img/<?= $baris["gambar"]; ?>" width="50"></td>
         <td><?= $baris["nim"]; ?></td>

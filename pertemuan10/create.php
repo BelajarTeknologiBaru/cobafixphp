@@ -1,7 +1,5 @@
 <?php 
-require 'functions.php';
-// koneksikan ke DBMS
-$conn = mysqli_connect("localhost", "root", "", "phpdasar");
+require 'helper/functions.php';
 
 // cek apakah tombol submit sudah ditekan apa belum
 if(isset($_POST["submit"])){
